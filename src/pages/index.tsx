@@ -243,8 +243,9 @@ export default function Home() {
                                        ...productFormInputs,
                                        [e.target.name]: e.target.value
                                    })}/>
-                            <label>Product price</label>
-                            <input name='productPrice' value={productFormInputs.productPrice}
+                            {/*All these labels need an `htmlFor` and the input needs to have an id that matched the htmlFor */}
+                            <label htmlFor={'productPrice'}>Product price</label>
+                            <input id={'productPrice'} name='productPrice' value={productFormInputs.productPrice}
                                    onChange={(e) => setProductFormInputs({
                                        ...productFormInputs,
                                        [e.target.name]: e.target.value
